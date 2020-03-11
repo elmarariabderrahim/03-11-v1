@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker restart $1
+
 str=$(docker port test-mysql)
 IFS=''
 read -ra ADDR <<< "$str"
