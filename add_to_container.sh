@@ -2,7 +2,7 @@
 
 docker restart $1
 str=$(docker port test-mysql)
-IFS=':'
+IFS=''
 read -ra ADDR <<< "$str"
 docker_mysql_port=${ADDR[1]}
 mysql -P $docker_mysql_port --protocol=tcp -u root -pHGKO$.xu1234 -Bse "drop database if exists db5;create database db5;use db5;"
