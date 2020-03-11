@@ -12,8 +12,8 @@ pipeline {
         }
         stage('Import_schema_apply_scripts') {
             steps {
-		                echo 'Hello world!' 
-            }
+		    sh 'chmod 777 ./add_to_container.sh'
+        	    sh './add_to_container.sh test-mysql'            }
         }
         stage('Apply_to_db') {
             steps {
