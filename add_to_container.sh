@@ -16,5 +16,5 @@ do
 varrr="${varrr}$line"
 done < "$input"
 echo "$varrr"
-mysql -P $docker_mysql_port --protocol=tcp -uroot -pHGKO$.xu1234 -Bse "$varrr"
+mysql -P 32772 --protocol=tcp -uroot -pHGKO$.xu1234 -Bse "$varrr"
 
