@@ -45,8 +45,7 @@ def greet() {
 						}
 						if (currentCreateTable[j].substring(currentCreateTable[j].length()-1, currentCreateTable[j].length())==',') {
 							if(j>0)
-								currentConstraints.add(currentCreateTable[j].substring(0, currentCreateTable[j].length() - 1) + ", ")
-							else
+currentConstraints.add(currentCreateTable[j].substring(0, currentCreateTable[j].length() - 1) + ", ADD")							else
 								currentConstraints.add(currentCreateTable[j].substring(0, currentCreateTable[j].length() - 1))
 							
 						}
