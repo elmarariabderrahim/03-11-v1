@@ -74,6 +74,7 @@ def greet() {
 				
 				//showCreateTables_min[i][showCreateTables_min[i].length-1]=showCreateTables_min[i][showCreateTables_min[i].length-1]+";"
 		}
+		println "use db5;"
 		for(def int k=0 ; k<showCreateTables_min.size ; k++) {
 		 for(def int s=0 ; s<showCreateTables_min[k].length ; s++) {
 			 println showCreateTables_min[k][s]
