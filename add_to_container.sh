@@ -2,7 +2,7 @@
 
 
 str=$(docker port test-mysql)
-IFS=''
+IFS=':'
 read -ra ADDR <<< "$str"
 docker_mysql_port=${ADDR[1]}
 echo ${docker_mysql_port}
