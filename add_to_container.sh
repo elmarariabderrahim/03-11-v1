@@ -14,6 +14,16 @@ while IFS= read -r line
 do
 varrr="${varrr}$line"
 done < "$input"
-echo "$varrr"
 mysql -P $docker_mysql_port --protocol=tcp -uroot -pHGKO$.xu1234 -Bse "$varrr"
+
+IFS=':'
+for f in sql_scripts/*; do
+input="./$f"
+varrr=""
+while IFS= read -r line
+do
+varrr="${varrr}$line"
+done < "$input"
+mysql -P $docker_mysql_port --protocol=tcp -uroot -pHGKO$.xu1234 -Bse "$varrr"
+done
 
