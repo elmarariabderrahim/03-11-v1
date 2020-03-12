@@ -1,3 +1,4 @@
+use db5;
 insert into departements values ('1','IT');
 insert into departements values ('2','LO');
 insert into departements values ('3','EL');
