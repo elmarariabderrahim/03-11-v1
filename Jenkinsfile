@@ -19,7 +19,8 @@ pipeline {
         stage('Apply_to_db') {
             steps {
 		    
-		    echo 'Hello world!' 
+		    sh 'chmod 777 ./apply_scripts_db.sh'
+        	    sh './apply_scripts_db.sh'  
             }
         }
     }
