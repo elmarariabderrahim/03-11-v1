@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Import_schema_apply_scripts') {
             steps {
-		    sh 'socker start test-mysql' 
+		    sh 'docker start test-mysql' 
 		    sh 'chmod 777 ./add_to_container.sh'
         	    sh './add_to_container.sh'            }
         }
