@@ -2,7 +2,7 @@ import groovy.sql.Sql
 import java.sql.DriverManager
 class Tools {
 def greet() {
-		def sql = Sql.newInstance('jdbc:mysql://localhost:3306/employees', 'root', 'pixid123', 'com.mysql.jdbc.Driver')
+		def sql = Sql.newInstance('jdbc:mysql://localhost:3306/db5', 'root', 'pixid123', 'com.mysql.jdbc.Driver')
 		
 		def ArrayList tablesName = new ArrayList<>()
 		def ArrayList showCreateTables = new ArrayList<>()
