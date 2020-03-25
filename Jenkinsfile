@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Import_schema_apply_scripts') {
             steps {
-		    bat 'sh -c docker start test-mysql' 
+		   
         	   bat 'sh -c ./add_to_container.sh'            }
         }
         stage('Apply_to_db') {
