@@ -4,23 +4,20 @@ pipeline {
         stage('generate_DDL') {
             steps {
 		    
-		    sh 'chmod 777 ./exp_script.sh'
-        	    sh './exp_script.sh'
+        	     bat 'sh -c ./exp_script.sh'
 		   
 		    
             }
         }
         stage('Import_schema_apply_scripts') {
             steps {
-		    sh 'docker start test-mysql' 
-		    sh 'chmod 777 ./add_to_container.sh'
-        	    sh './add_to_container.sh'            }
+		    bat 'sh -c docker start test-mysql' 
+        	   bat 'sh -c ./add_to_container.sh'            }
         }
         stage('Apply_to_db') {
             steps {
 		    
-		    sh 'chmod 777 ./apply_scripts_db.sh'
-        	    sh './apply_scripts_db.sh'  
+        	    bat 'sh -c ./apply_scripts_db.sh'  
             }
         }
     }
